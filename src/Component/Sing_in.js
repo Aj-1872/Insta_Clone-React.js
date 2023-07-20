@@ -1,5 +1,8 @@
+import { isElementType } from '@testing-library/user-event/dist/utils';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+
 
 // Rest of your code...
 
@@ -10,14 +13,20 @@ export class Sing_in extends Component {
 
     this.userRef = React.createRef();
     this.passRef = React.createRef();
+
+    
   }
-
-
-
+  
+  
+  
+  
   render() {
+    
+    
     return (
-      <div className="flex justify-center items-center " id='main' >
-        <div className="w-90">
+      
+      <div className="flex justify-center items-center" id='main' >
+        <div className="w-90 ">
           <form >
             <h1 className="text-4xl font-bold mb-8 font-billabong text-center mt-7">Instagram</h1>
 
@@ -53,20 +62,23 @@ export class Sing_in extends Component {
                 placeholder="Password"
               />
             </div>
+           
 
-            <div className="mt-2 mb-6 text-center appearance-none list-none">
+            <div  className="mt-2 mb-6 text-center appearance-none list-none">
               <a href="/" className="text-black-500 hover:underline">
                 Forgot your login details? <span className="font-medium">Get help signing in.</span>
               </a>
             </div>
 
-            <div className="flex items-center justify-center py-2 bg-blue-500 text-white rounded-md ">
-            <Link to="/Home" className=" text-center w-full py-2 bg-blue-500 text-white rounded-md">Log in</Link>
+           <div  className="flex items-center justify-center py-2 bg-blue-500 text-white rounded-md ">
+            <Link id='SingInBtn' to='/Home' className=" text-center w-full py-2 bg-blue-500 text-white rounded-md">Log in</Link>
           </div>
+       
+          
           
 
             <div className="mt-8 text-center appearance-none list-none">
-              <a href="/" className="text-black-500 hover:underline">
+              <a href="" className="text-black-500 hover:underline">
                 Don't have an account?<span className="font-medium text-blue-600"> Sign up.</span>
               </a>
             </div>
